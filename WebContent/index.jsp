@@ -5,11 +5,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Jeux de video</title>
 </head>
 <body>
 	<h1>Jeux de video</h1>
 	<br />
-	<a href="GestionUsers">Liste d'utilisateurs</a>
+	<a href="rest/users">Liste d'utilisateurs</a>
+	<br />
+	<a href="client.jsp">Insert un client</a>
+	<br />
+	<a href="rest/commands">Liste d'achats</a>
+	<br />
+	<a href="achat.jsp">Insert un achats</a>
 </body>
 </html>

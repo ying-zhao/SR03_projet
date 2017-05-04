@@ -141,6 +141,7 @@ public class ClientDao {
 			}
 			
 			res.close();
+			
 			ConnexionBDD.getInstance().closeCnx();			
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.List;
 
 import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -63,17 +64,20 @@ public class ClientController {
 	@POST
 	@Path("/addUser")
 	@Produces("text/plain")
-	public Response addUser(@QueryParam("nom") String nom,
-			@QueryParam("prenom") String prenom,
-			@QueryParam("email") String email,
-			@QueryParam("tel") String tel,
-			@QueryParam("username") String username,
-			@QueryParam("pwd") String pwd,
-			@QueryParam("date_nassance") Date date_naissance,
-			@QueryParam("adresse") String adresse,
-			@QueryParam("pays") String pays,
-			@QueryParam("code_postal") String code_postal,
-			@QueryParam("ville") String ville){
+	public Response addUser(@FormParam("nom") String nom,
+			@FormParam("prenom") String prenom,
+			@FormParam("email") String email,
+			@FormParam("tel") String tel,
+			@FormParam("username") String username,
+			@FormParam("pwd") String pwd,
+			@FormParam("date_nassance") Date date_naissance,
+			@FormParam("adresse") String adresse,
+			@FormParam("pays") String pays,
+			@FormParam("code_postal") String code_postal,
+			@FormParam("ville") String ville){
+		
+		
+		System.out.println("-------------post-------");
 		
 		Client c = new Client( nom, prenom, email, tel, username, pwd, date_naissance, adresse, pays, ville, code_postal);
 		

@@ -2,6 +2,7 @@ package beans;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Achat implements Serializable{
@@ -9,6 +10,34 @@ public class Achat implements Serializable{
 	private int id_client; // ou private Client client; 
 	private Date date;
 	private List<Jeux> jeux; // private List<id> jeux;
+	
+	public Achat() {
+		this.jeux = new ArrayList<Jeux>();
+	}
+	
+	public Achat( int id, int id_client, Date date) {
+		//super();
+    	this.id = id;
+    	this.id_client = id_client;
+    	this.date = date;
+    	this.jeux = new ArrayList<Jeux>();
+	}
+	
+	public Achat( int id_client, Date date, List<Jeux> jeux) {
+		//super();
+    	this.id_client = id_client;
+    	this.date = date;
+    	this.jeux = new ArrayList<Jeux>();
+	}
+	
+
+
+
+	@Override
+	public String toString(){
+		return id + " " + id_client;
+		
+	}
 	public int getId() {
 		return id;
 	}

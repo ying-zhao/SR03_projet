@@ -2,6 +2,7 @@ package beans;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Jeux implements Serializable{
@@ -13,6 +14,18 @@ public class Jeux implements Serializable{
     private double prix;
     private Date sortie;
     private int Nombre; //il faut ajouter dans la BDD
+    
+
+
+	public Jeux() {
+		this.typeJeux = new ArrayList<TypeDeJeux>();
+		// TODO Auto-generated constructor stub
+	}
+	public Jeux(int id) {
+		this.id = id;
+		this.typeJeux = new ArrayList<TypeDeJeux>();
+		// TODO Auto-generated constructor stub
+	}
 	public int getId() {
 		return id;
 	}
